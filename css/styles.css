@@ -96,6 +96,8 @@ ul {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
 }
 .contacts .link:hover,
 .contacts .link:focus{
@@ -267,19 +269,20 @@ gap: 21px;
     height: 100%;
     transform: translateY(100%);
 }
-.image-text:hover,
-.image-text:focus{
-transform: translateY(0%); 
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .portfolio-img-wraper{
     position: relative;
     overflow: hidden;
 }
 .portfolio-branch-img{
     text-decoration: none;
-}
 
+}
+.portfolio-branch-img:hover .image-text,
+.portfolio-branch-img:focus .image-text{
+    transform: translateY(0);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .photo-team .title-up{
     color:var(--main-color); 
@@ -580,27 +583,11 @@ z-index: 3;
     right: 8px;
     width: 30px;
     height: 30px;
-    background: var(--c-white);
+    background: var(--hero-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
 
-}
-.close-button::before,
-.close-button::after {
-    position: absolute;
-    left: 50%;
-    top:50%;
-    content: "";
-    background-color: var(--primary-text-color);
-    width: 15px;
-    height: 2px;
-}
-.close-button::before{
-    transform: translate(-50%,-50%)rotate(-45deg);
-}
-.close-button::after     {
-    transform: translate(-50%, -50%)rotate(45deg);
 }
 .modal-wrap{
     position: fixed;
@@ -614,11 +601,4 @@ z-index: 3;
 .is-hidden{
     opacity: 0;
     pointer-events: none;
-}
-.icon-closemodal{
-    display: flex;
-    fill: #000000;
-    z-index: 6;
-    width: 18px;
-    height: 18px;
 }
