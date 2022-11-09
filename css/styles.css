@@ -179,7 +179,7 @@ ul {
     line-height: 1.1666;
     color: var(--hero-color);
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     background-color: rgba(47, 48, 58, 0.8);
     text-align: center;
     text-transform: uppercase;
@@ -572,6 +572,9 @@ z-index: 3;
 
 }
 .close-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -580,6 +583,7 @@ z-index: 3;
     background: var(--c-white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    cursor: pointer;
 
 }
 .close-button::before,
@@ -605,13 +609,16 @@ z-index: 3;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 .is-hidden{
     opacity: 0;
     pointer-events: none;
 }
-/*
-.icons-hover:hover,
-.icons-hover:focus {
-    fill: var(--accent-color);
-}*/
+.icon-closemodal{
+    display: flex;
+    fill: #000000;
+    z-index: 6;
+    width: 18px;
+    height: 18px;
+}
